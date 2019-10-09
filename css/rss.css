@@ -1,0 +1,36 @@
+.card_link a{
+    color:black;
+    text-decoration:none
+}
+
+.title_article{
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden
+}
+
+.img_article{
+    height: 250px!important;
+    width: 100%!important;
+    display: block;
+    border-radius: 50px
+}
+.content_img img{
+    padding-left: 10%;
+    padding-right: 10%
+}
+
+img{
+    height: 300px;
+    width: 100%;
+    display: block;
+}
+
+#content-odd{
+    padding-left: initial!important;
+    padding-right: initial!important
+}
+
+.icon-template{
+    cursor: pointer;
+}

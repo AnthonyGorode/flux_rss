@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Flux RSS</title>
+        <link rel="stylesheet" href="js/modules/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/rss.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">            
+            <a class="navbar-brand toto mr-auto" href="index.html">Flux RSS</a>
+            <div class="text-white d-flex justify-content-around" style="width: 10%">
+                <i id="one-column" class="fas fa-pager icon-template"></i>
+                <i id="two-columns" class="fas fa-columns icon-template"></i>
+                <i id="multiple-columns" class="fas fa-solar-panel icon-template"></i>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-12">
+                    <div id="list-rss" class="list-group pt-2"></div>
+                    <div class="form-group mt-4">
+                        <input type="text" class="form-control" id="name_news" placeholder="Nom du media" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="url_rss" placeholder="Url du flux rss">
+                        <div class="invalid-feedback pl-4"></div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-lg" onclick=addFluxRss()>AJOUTER</button>
+                </div>
+                <div id="block-article" class="col-lg-9 col-md-8 container"></div>
+                <div id="block-modal"></div>
+            </div>
+        </div>
+
+
+        <script src="js/modules/bootstrap/js/jquery.min.js"></script>
+        <script src="js/modules/bootstrap/js/popper.min.js"></script>
+        <script src="js/modules/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="js/modules/firebase/firebase-app.js"></script>
+        <script src="js/modules/firebase/firebase-auth.js"></script>
+        <script src="js/modules/firebase/firebase-database.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+
+        <script src="js/utils.js"></script>
+        <script src="js/firebase.js"></script>
+        <script src="js/ApiRss.js"></script>
+        <script src="js/templates/card.js"></script>
+        <script src="js/templates/modal.js"></script>
+        <script src="js/rss.js"></script>
+
+        <!-- https://console.firebase.google.com/project/fluxrss-a7d9e/database/fluxrss-a7d9e/data/ -->
+        
+    </body>
+</html>
